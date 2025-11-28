@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>nextwave PWA</title>
+    <meta name="theme-color" content="#10359d">
+    <meta name="description" content="Installable progressive web app that works online and offline.">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png">
+    <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <noscript>
+        <p class="notice">This site needs JavaScript for the install button to appear.</p>
+    </noscript>
+    <header class="hero">
+        <div>
+            <p class="eyebrow">Progressive Web App</p>
+            <h1>Experience nextwave like an app.</h1>
+            <p>Fast, installable, offline-first. Once added to your home screen you get native-like performance without an app store.</p>
+            <button id="installButton" class="primary" type="button" disabled>Preparing install…</button>
+        </div>
+        <div class="card preview">
+            <p class="preview-label">Install preview</p>
+            <div class="preview-icon">
+                <img src="assets/icons/icon-192.png" alt="nextwave icon" width="96" height="96">
+            </div>
+            <p class="preview-title">nextwave</p>
+            <p class="preview-subtitle">Tap install when prompted</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="grid">
+            <article class="card">
+                <h2>Offline support</h2>
+                <p>The service worker caches core assets so you can load even without a network connection.</p>
+            </article>
+            <article class="card">
+                <h2>Lightweight</h2>
+                <p>No frameworks required. Pure HTML, CSS and vanilla JavaScript keep it quick to load.</p>
+            </article>
+            <article class="card">
+                <h2>Install instructions</h2>
+                <ol>
+                    <li>Visit this site in Chrome, Edge or Safari.</li>
+                    <li>Accept the install prompt or tap the browser menu.</li>
+                    <li>Choose <strong>Add to Home Screen</strong>.</li>
+                </ol>
+            </article>
+        </section>
+
+        <section class="card install-help">
+            <h2>Don’t see the install prompt?</h2>
+            <p>The button appears when the browser confirms the site meets PWA install criteria (served over HTTPS, manifest, service worker). On desktop, check the address bar icon <strong>Install nextwave</strong>.</p>
+            <details>
+                <summary>Manual add to home screen</summary>
+                <ul>
+                    <li><strong>iOS Safari</strong>: Share → Add to Home Screen</li>
+                    <li><strong>Android Chrome</strong>: ⋮ menu → Install app</li>
+                    <li><strong>Desktop Chrome/Edge</strong>: Install icon at right of address bar</li>
+                </ul>
+            </details>
+        </section>
+    </main>
+
+    <footer>
+        <small>© <span id="year"></span> nextwave PWA demo.</small>
+    </footer>
+</body>
+</html>
+
