@@ -13,7 +13,7 @@ async function registerServiceWorker() {
     }
 
     try {
-        await navigator.serviceWorker.register("/sw.js");
+        await navigator.serviceWorker.register("./sw.js");
         installButton.textContent = "Checking download status…";
     } catch (error) {
         console.error("SW registration failed", error);
